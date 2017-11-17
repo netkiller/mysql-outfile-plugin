@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+PROJECT(outfile)
+ADD_LIBRARY(outfile SHARED outfile.c)
+INCLUDE_DIRECTORIES(/usr/include/mysql)
+#TARGET_LINK_LIBRARIES(outfile )
+INSTALL(PROGRAMS liboutfile.so DESTINATION /usr/lib64/mysql/plugin/)
