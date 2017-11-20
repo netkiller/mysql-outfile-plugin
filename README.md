@@ -33,11 +33,13 @@ Plugin Install and Uninstall
 
 Testing
 -------
-### 创建管道	
+
+### 安装插件	
 
 	mysql> create function out2file returns string soname 'liboutfile.so';
 	Query OK, 0 rows affected (0.00 sec)
 
+### 调用插件
 
 	mysql> select out2file('/tmp/myoutfile',"Helloworld!!!");
 	+--------------------------------------------+
@@ -46,10 +48,8 @@ Testing
 	| true                                       |
 	+--------------------------------------------+
 	1 row in set (0.00 sec)
-
-
 	
-	查看管道是否创建
+### 查看文件
 
 
 	root@netkiller ~/mysql-outfile-plugin % cat /tmp/myoutfile
@@ -65,6 +65,3 @@ https://www.paypal.me/netkiller
 Wechat (微信) / Alipay (支付宝) 打赏:
 
 http://www.netkiller.cn/home/donations.html
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/netkiller/mysql-outfile-plugin/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
