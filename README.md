@@ -9,7 +9,7 @@ Build
 	git clone https://github.com/netkiller/mysql-outfile-plugin.git
 	cd mysql-outfile-plugin/
 
-	yum install -y cmake3
+	yum install -y cmake3 mysql-community-devel
 	
 	cmake3 .
 	make
